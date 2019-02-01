@@ -1,0 +1,7 @@
+C:\Users\Michael\source\repos\HighCard\HighCard\bin\Debug\HighCard.exe.config
+C:\Users\Michael\source\repos\HighCard\HighCard\bin\Debug\HighCard.exe
+C:\Users\Michael\source\repos\HighCard\HighCard\bin\Debug\HighCard.pdb
+C:\Users\Michael\source\repos\HighCard\HighCard\obj\Debug\HighCard.csprojAssemblyReference.cache
+C:\Users\Michael\source\repos\HighCard\HighCard\obj\Debug\HighCard.csproj.CoreCompileInputs.cache
+C:\Users\Michael\source\repos\HighCard\HighCard\obj\Debug\HighCard.exe
+C:\Users\Michael\source\repos\HighCard\HighCard\obj\Debug\HighCard.pdb
