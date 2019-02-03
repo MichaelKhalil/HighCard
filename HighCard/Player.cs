@@ -7,6 +7,11 @@
         {
             player_name = name;
         }
+
+        public void setName(string name)
+        {
+            player_name = name;
+        }
         public string getName()
         {
             return player_name;
