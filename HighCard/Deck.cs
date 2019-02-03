@@ -6,50 +6,60 @@ namespace HighCard
     {
         public const int NUMBER_OF_SUITS = 4;
         public const int NUMBER_OF_CARDTYPES = 13;
-        public List<Cards> myDeck = new List<Cards>();
+        public List<Cards> my_deck = new List<Cards>();
         public Deck()
         {
-            for(int i = 1; i <= NUMBER_OF_CARDTYPES; i++)
-            {
-                for(int j = 1; j <= NUMBER_OF_SUITS; j++)
-                {
-                    Cards myCard = new Cards(i, j);
-                    myDeck.Add(myCard);
-                }
-            }
+            addCards();
         }
         public List<Cards> getDeck()
         {
-            return myDeck;
+            return my_deck;
+        }
+        private void addCards()
+        {
+            for (int i = 1; i <= NUMBER_OF_CARDTYPES; i++)
+            {
+                for (int j = 1; j <= NUMBER_OF_SUITS; j++)
+                {
+                    Cards my_card = new Cards(i, j);
+                    my_deck.Add(my_card);
+                }
+            }
         }
         //Fisher–Yates shuffle algorithm stackoverflow.com/questions/49570175/simple-way-to-randomly-shuffle-list
         public void shuffle()
         {
             Random random = new Random();
-            int n = myDeck.Count;
+            int n = my_deck.Count;
 
-            for (int i = myDeck.Count - 1; i > 1; i--)
+            for (int i = my_deck.Count - 1; i > 1; i--)
             {
                 int rnd = random.Next(i + 1);
 
-                Cards value = myDeck[rnd];
-                myDeck[rnd] = myDeck[i];
-                myDeck[i] = value;
+                Cards value = my_deck[rnd];
+                my_deck[rnd] = my_deck[i];
+                my_deck[i] = value;
             }
+        }
+        public void remake()
+        {
+            my_deck.Clear();
+            addCards();
+            shuffle();
         }
         public int getDeckSize()
         {
-            return myDeck.Count;
+            return my_deck.Count;
         }
         //Remove a card at the front of our deck list
         public void removeCard()
         {
-            myDeck.RemoveAt(0);
+            my_deck.RemoveAt(0);
         }
         //Return a card while simultaneously calling removeCard()
         public Cards draw()
         {
-            Cards myCard = myDeck[0];
+            Cards myCard = my_deck[0];
             removeCard();
             return myCard;
         }

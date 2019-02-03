@@ -3,9 +3,9 @@
     internal class Player
     {
         private string player_name;
-        public Player(string name)
+        private int score;
+        public Player()
         {
-            player_name = name;
         }
 
         public void setName(string name)
@@ -15,6 +15,19 @@
         public string getName()
         {
             return player_name;
+        }
+
+        public void incrementScore()
+        {
+            score++;
+        }
+        public int getScore()
+        {
+            return score;
+        }
+        public void clearScore()
+        {
+            score = 0;
         }
     }
 }
