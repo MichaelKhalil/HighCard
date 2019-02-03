@@ -31,7 +31,7 @@ namespace HighCard
                 {
                     //Main game loop
                     compare(player1, player2, deck);
-                    //Wait for the user to press enter
+                    //Wait for the user to press enter if they chose to not auto
                     if(autorun == false)
                     {
                         Console.ReadLine();
@@ -94,7 +94,7 @@ namespace HighCard
             //Print score
             Console.WriteLine("The score is\n" + player1.getName() + ": " + player1.getScore() + "\n" +
                 player2.getName() + ": " + player2.getScore());
-            Console.WriteLine("~---~~---~~---~~---~~---~~---~~---~~---~");
+            Console.WriteLine("\n~---~~---~~---~~---~~---~~---~~---~~---~");
         }
         private static void addPoint(Player player)
         {

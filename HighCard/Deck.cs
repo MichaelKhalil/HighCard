@@ -15,6 +15,7 @@ namespace HighCard
         {
             return my_deck;
         }
+        //Add a default 52 unshuffled cards to the deck
         private void addCards()
         {
             for (int i = 1; i <= NUMBER_OF_CARDTYPES; i++)
@@ -41,12 +42,14 @@ namespace HighCard
                 my_deck[i] = value;
             }
         }
+        //Remove all cards from the deck, add 52 unshuffled cards and randomize
         public void remake()
         {
             my_deck.Clear();
             addCards();
             shuffle();
         }
+        //Return the current number of cards in the deck
         public int getDeckSize()
         {
             return my_deck.Count;
